@@ -1,6 +1,30 @@
 # Optimizacion-de-Produccion-de-Agendas-y-Libretas-ICMAT-UFRO
 El proyecto busca optimizar el proyecto de agendas y libretas icmat ufro
 
+## Estructura del Proyecto
+
+```text
+.
+|
+| (Horarios)
+├── scheduling2-2.py
+├── Una única maquinaria/
+│   ├── Reportes (HTML)
+│   └── ...
+├── Varias Maquinas/
+│   ├── Reportes (HTML)
+│   └── ...
+|
+| (Optimizaciones de Corte)
+├── escenarios.m
+├── script_optimizacion_fuerza_bruta.m
+├── script_optimizacion_vinilo_economico.m
+├── script_optimizacion_vinilos.m
+├── script_simulacion_estres.m
+├── Resultados.txt
+|
+└──README.md (Este archivo)
+```
 # script_optimizacion_fuerza_bruta.m
 Implementación de Problema de Corte.
 
