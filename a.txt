@@ -1,0 +1,381 @@
+script_simulacion_estres
+resumen del plan de manufactura
+cantidad de agendas a manufacturar: 40
+cantidad de libretas a manufacturar: 11
+tapas de agendas requeridas con merma: 88
+tapas de libretas requeridas con merma: 25
+
+generando todas las combinaciones de corte posibles:
+patron 1: 0 agendas y 13 libretas en carton chico 38x55 cm
+patron 2: 1 agendas y 11 libretas en carton chico 38x55 cm
+patron 3: 2 agendas y 8 libretas en carton chico 38x55 cm
+patron 4: 3 agendas y 6 libretas en carton chico 38x55 cm
+patron 5: 4 agendas y 4 libretas en carton chico 38x55 cm
+patron 6: 0 agendas y 27 libretas en carton grande 55x77 cm
+patron 7: 1 agendas y 25 libretas en carton grande 55x77 cm
+patron 8: 2 agendas y 22 libretas en carton grande 55x77 cm
+patron 9: 3 agendas y 20 libretas en carton grande 55x77 cm
+patron 10: 4 agendas y 17 libretas en carton grande 55x77 cm
+patron 11: 5 agendas y 15 libretas en carton grande 55x77 cm
+patron 12: 6 agendas y 13 libretas en carton grande 55x77 cm
+patron 13: 7 agendas y 10 libretas en carton grande 55x77 cm
+patron 14: 8 agendas y 8 libretas en carton grande 55x77 cm
+patron 15: 9 agendas y 6 libretas en carton grande 55x77 cm
+
+iniciando ataque por fuerza bruta para evaluar factibilidad...
+
+se encontraron 131 combinaciones de compra validas
+mostrando las 5 opciones mas economicas para analisis del equipo:
+
+opcion 1: comprar 0 chicos y 10 grandes
+costo base giorgio: $11000 | costo final reglamento: $13200
+instrucciones para este costo:
+  repetir 10 veces el patron 15 (9 agendas y 6 libretas en carton grande 55x77 cm)
+resultado: sobran 2 agendas y 35 libretas
+
+opcion 2: comprar 2 chicos y 9 grandes
+costo base giorgio: $11240 | costo final reglamento: $13488
+instrucciones para este costo:
+  repetir 2 veces el patron 5 (4 agendas y 4 libretas en carton chico 38x55 cm)
+  repetir 9 veces el patron 15 (9 agendas y 6 libretas en carton grande 55x77 cm)
+resultado: sobran 1 agendas y 37 libretas
+
+opcion 3: comprar 4 chicos y 8 grandes
+costo base giorgio: $11480 | costo final reglamento: $13776
+instrucciones para este costo:
+  repetir 4 veces el patron 5 (4 agendas y 4 libretas en carton chico 38x55 cm)
+  repetir 8 veces el patron 15 (9 agendas y 6 libretas en carton grande 55x77 cm)
+resultado: sobran 0 agendas y 39 libretas
+
+opcion 4: comprar 1 chicos y 10 grandes
+costo base giorgio: $11670 | costo final reglamento: $14004
+instrucciones para este costo:
+  repetir 1 veces el patron 5 (4 agendas y 4 libretas en carton chico 38x55 cm)
+  repetir 10 veces el patron 15 (9 agendas y 6 libretas en carton grande 55x77 cm)
+resultado: sobran 6 agendas y 39 libretas
+
+opcion 5: comprar 3 chicos y 9 grandes
+costo base giorgio: $11910 | costo final reglamento: $14292
+instrucciones para este costo:
+  repetir 3 veces el patron 5 (4 agendas y 4 libretas en carton chico 38x55 cm)
+  repetir 9 veces el patron 15 (9 agendas y 6 libretas en carton grande 55x77 cm)
+resultado: sobran 5 agendas y 41 libretas
+
+Tiempo de ejecución: 1.4086 segundos
+
+INICIANDO PRUEBA DE ESTRÉS PARA CARTÓN PIEDRA
+evaluando la opcion 1: comprar 0 chicos y 10 grandes
+probabilidad de error por cada corte individual: 5%
+simulando la produccion 1000000 veces...
+
+DETALLE PASO A PASO: SIMULACIÓN 1 (CARTÓN PIEDRA)
+carton 1 (patron 15) -> agendas intentadas: 9 (fallaron: 1) | libretas intentadas: 6 (fallaron: 0)
+carton 2 (patron 15) -> agendas intentadas: 9 (fallaron: 1) | libretas intentadas: 6 (fallaron: 1)
+carton 3 (patron 15) -> agendas intentadas: 9 (fallaron: 1) | libretas intentadas: 6 (fallaron: 0)
+carton 4 (patron 15) -> agendas intentadas: 9 (fallaron: 1) | libretas intentadas: 6 (fallaron: 0)
+carton 5 (patron 15) -> agendas intentadas: 9 (fallaron: 2) | libretas intentadas: 6 (fallaron: 1)
+carton 6 (patron 15) -> agendas intentadas: 9 (fallaron: 0) | libretas intentadas: 6 (fallaron: 1)
+carton 7 (patron 15) -> agendas intentadas: 9 (fallaron: 0) | libretas intentadas: 6 (fallaron: 0)
+carton 8 (patron 15) -> agendas intentadas: 9 (fallaron: 0) | libretas intentadas: 6 (fallaron: 0)
+carton 9 (patron 15) -> agendas intentadas: 9 (fallaron: 1) | libretas intentadas: 6 (fallaron: 0)
+carton 10 (patron 15) -> agendas intentadas: 9 (fallaron: 0) | libretas intentadas: 6 (fallaron: 0)
+FIN DEL DETALLE DE LA SIMULACIÓN 1
+
+RESULTADOS FINALES DEL ESTRÉS (CARTÓN PIEDRA)
+1. Demanda real estricta : 80 tapas agenda, 22 tapas libreta
+2. Objetivo de corte     : 88 tapas agenda, 25 tapas libreta
+
+Estadisticas tras 1000000 simulaciones:
+- Promedio : 85.5 tapas agenda | 57.0 tapas libreta
+- Peor caso: 72 tapas agenda | 46 tapas libreta
+- Mejor caso: 90 tapas agenda | 60 tapas libreta
+
+CONCLUSIÓN CARTÓN PIEDRA:
+Hay un 99.47% de confianza en que la compra cubre la demanda real
+
+
+resumen de produccion de vinilos exterior
+agendas a forrar: 40 (requiere 80 tapas base + min. 2 extras)
+libretas a forrar: 11 (requiere 11 tapas base + min. 1 extra)
+
+iniciando ataque por fuerza bruta...
+busqueda finalizada con exito
+se encontraron 61052 combinaciones viables con margen de seguridad
+
+mostrando las 5 opciones mas eficientes:
+
+opcion 1
+largo de rollo a comprar: 435 cm
+costo final imprenta: $67294
+instrucciones para armar el archivo de impresion:
+  incluir 20 franjas del patron 2 (20 cm alto: 4 agendas)
+  incluir 1 franjas del patron 3 (20 cm alto: 2 agendas y 4 libretas)
+  incluir 1 franjas del patron 4 (15 cm alto: 8 libretas)
+resultado final de esta mezcla:
+sobran 2 tapas de agendas y 1 tapas de libretas
+
+opcion 2
+largo de rollo a comprar: 435 cm
+costo final imprenta: $67294
+instrucciones para armar el archivo de impresion:
+  incluir 2 franjas del patron 1 (25 cm alto: 5 agendas)
+  incluir 18 franjas del patron 2 (20 cm alto: 4 agendas)
+  incluir 2 franjas del patron 5 (12.5 cm alto: 6 libretas)
+resultado final de esta mezcla:
+sobran 2 tapas de agendas y 1 tapas de libretas
+
+opcion 3
+largo de rollo a comprar: 435 cm
+costo final imprenta: $67294
+instrucciones para armar el archivo de impresion:
+  incluir 4 franjas del patron 1 (25 cm alto: 5 agendas)
+  incluir 15 franjas del patron 2 (20 cm alto: 4 agendas)
+  incluir 1 franjas del patron 3 (20 cm alto: 2 agendas y 4 libretas)
+  incluir 1 franjas del patron 4 (15 cm alto: 8 libretas)
+resultado final de esta mezcla:
+sobran 2 tapas de agendas y 1 tapas de libretas
+
+opcion 4
+largo de rollo a comprar: 435 cm
+costo final imprenta: $67294
+instrucciones para armar el archivo de impresion:
+  incluir 6 franjas del patron 1 (25 cm alto: 5 agendas)
+  incluir 13 franjas del patron 2 (20 cm alto: 4 agendas)
+  incluir 2 franjas del patron 5 (12.5 cm alto: 6 libretas)
+resultado final de esta mezcla:
+sobran 2 tapas de agendas y 1 tapas de libretas
+
+opcion 5
+largo de rollo a comprar: 435 cm
+costo final imprenta: $67294
+instrucciones para armar el archivo de impresion:
+  incluir 8 franjas del patron 1 (25 cm alto: 5 agendas)
+  incluir 10 franjas del patron 2 (20 cm alto: 4 agendas)
+  incluir 1 franjas del patron 3 (20 cm alto: 2 agendas y 4 libretas)
+  incluir 1 franjas del patron 4 (15 cm alto: 8 libretas)
+resultado final de esta mezcla:
+sobran 2 tapas de agendas y 1 tapas de libretas
+
+Tiempo de ejecución: 0.2524 segundos
+
+INICIANDO PRUEBA DE ESTRÉS PARA VINILOS (OPCIÓN 1)
+probabilidad de error por cada corte de vinilo: 1%
+simulando el forrado 1000000 veces...
+
+DETALLE PASO A PASO: SIMULACIÓN 1 (VINILOS)
+patron 2 (franja 1) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 2) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 3) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 4) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 5) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 6) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 7) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 8) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 9) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 10) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 11) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 12) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 13) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 14) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 15) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 16) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 17) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 18) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 19) -> agendas intentadas: 4 (fallaron: 0)
+patron 2 (franja 20) -> agendas intentadas: 4 (fallaron: 0)
+patron 3 (franja 1) -> agendas intentadas: 2 (fallaron: 0) | libretas intentadas: 4 (fallaron: 0)
+patron 4 (franja 1) -> libretas intentadas: 8 (fallaron: 1)
+FIN DEL DETALLE DE LA SIMULACIÓN 1 (VINILOS)
+
+RESULTADOS FINALES DEL ESTRÉS (VINILOS)
+1. Demanda real estricta : 80 tapas agenda, 11 tapas libreta
+2. Objetivo de corte     : 82 tapas agenda, 12 tapas libreta
+
+Estadisticas tras 1000000 simulaciones:
+- Promedio : 81.2 tapas agenda | 11.9 tapas libreta
+- Peor caso: 74 tapas agenda | 8 tapas libreta
+- Mejor caso: 82 tapas agenda | 12 tapas libreta
+
+CONCLUSIÓN VINILOS:
+Hay un 94.50% de confianza en que el rollo de 435 cm cubre la demanda real
+
+
+resumen de produccion de vinilos interiores y contraportadas
+interiores agenda requeridos con extra: 96
+interiores libreta requeridos con extra: 27
+exteriores libreta requeridos con extra: 14
+
+ejecutando escenario 1: mismo color modelo unificado
+
+iniciando busqueda hibrida...
+espacio: max 4 rollos de 45cm y 2 de 50cm
+
+busqueda finalizada con exito
+mostrando las 5 opciones mas eficientes:
+
+opcion 1
+comprar 0 rollos estandar de 45cm y 2 rollos extendidos de 50cm
+costo total en tienda china: $7980
+instrucciones de corte manual:
+  repetir 48 veces patron 5 en rollo 50 (16 cm alto: 2 agendas int)
+  repetir 2 veces patron 6 en rollo 50 (15.5 cm alto: 5 libretas int)
+  repetir 6 veces patron 7 en rollo 50 (9 cm alto: 3 libretas int)
+  repetir 2 veces patron 8 en rollo 50 (15 cm alto: 4 libretas ext)
+  repetir 2 veces patron 9 en rollo 50 (12.5 cm alto: 3 libretas ext)
+resultado final de esta mezcla:
+sobran 16 int agendas, 6 int libretas y 3 ext libretas
+sobrantes en cada rollo de 50cm: [0 52] cm
+
+opcion 2
+comprar 2 rollos estandar de 45cm y 1 rollos extendidos de 50cm
+costo total en tienda china: $8990
+instrucciones de corte manual:
+  repetir 26 veces patron 1 en rollo 45 (16 cm alto: 2 agendas int)
+  repetir 1 veces patron 3 en rollo 45 (12.5 cm alto: 3 libretas ext)
+  repetir 22 veces patron 5 en rollo 50 (16 cm alto: 2 agendas int)
+  repetir 2 veces patron 6 en rollo 50 (15.5 cm alto: 5 libretas int)
+  repetir 6 veces patron 7 en rollo 50 (9 cm alto: 3 libretas int)
+  repetir 2 veces patron 8 en rollo 50 (15 cm alto: 4 libretas ext)
+  repetir 1 veces patron 9 en rollo 50 (12.5 cm alto: 3 libretas ext)
+resultado final de esta mezcla:
+sobran 16 int agendas, 6 int libretas y 3 ext libretas
+sobrantes en cada rollo de 45cm: [8 123.5] cm
+sobrantes en cada rollo de 50cm: 0.5 cm
+
+opcion 3
+comprar 4 rollos estandar de 45cm y 0 rollos extendidos de 50cm
+costo total en tienda china: $10000
+instrucciones de corte manual:
+  repetir 48 veces patron 1 en rollo 45 (16 cm alto: 2 agendas int)
+  repetir 6 veces patron 2 en rollo 45 (15.5 cm alto: 5 libretas int)
+  repetir 5 veces patron 3 en rollo 45 (12.5 cm alto: 3 libretas ext)
+resultado final de esta mezcla:
+sobran 16 int agendas, 8 int libretas y 4 ext libretas
+sobrantes en cada rollo de 45cm: [8 8 9.5 171] cm
+
+opcion 4
+comprar 1 rollos estandar de 45cm y 2 rollos extendidos de 50cm
+costo total en tienda china: $10480
+instrucciones de corte manual:
+  repetir 2 veces patron 2 en rollo 45 (15.5 cm alto: 5 libretas int)
+  repetir 2 veces patron 3 en rollo 45 (12.5 cm alto: 3 libretas ext)
+  repetir 48 veces patron 5 en rollo 50 (16 cm alto: 2 agendas int)
+  repetir 6 veces patron 7 en rollo 50 (9 cm alto: 3 libretas int)
+  repetir 2 veces patron 8 en rollo 50 (15 cm alto: 4 libretas ext)
+resultado final de esta mezcla:
+sobran 16 int agendas, 6 int libretas y 3 ext libretas
+sobrantes en cada rollo de 45cm: 224 cm
+sobrantes en cada rollo de 50cm: [0 108] cm
+
+opcion 5
+comprar 3 rollos estandar de 45cm y 1 rollos extendidos de 50cm
+costo total en tienda china: $11490
+instrucciones de corte manual:
+  repetir 26 veces patron 1 en rollo 45 (16 cm alto: 2 agendas int)
+  repetir 1 veces patron 3 en rollo 45 (12.5 cm alto: 3 libretas ext)
+  repetir 22 veces patron 5 en rollo 50 (16 cm alto: 2 agendas int)
+  repetir 2 veces patron 6 en rollo 50 (15.5 cm alto: 5 libretas int)
+  repetir 6 veces patron 7 en rollo 50 (9 cm alto: 3 libretas int)
+  repetir 2 veces patron 8 en rollo 50 (15 cm alto: 4 libretas ext)
+  repetir 1 veces patron 9 en rollo 50 (12.5 cm alto: 3 libretas ext)
+resultado final de esta mezcla:
+sobran 16 int agendas, 6 int libretas y 3 ext libretas
+sobrantes en cada rollo de 45cm: [8 123.5 280] cm
+sobrantes en cada rollo de 50cm: 0.5 cm
+
+Tiempo de ejecución: 0.1968 segundos
+
+INICIANDO PRUEBA DE ESTRÉS PARA VINILO ECONÓMICO
+probabilidad de error por cada corte: 10%
+simulando el proceso 1000000 veces...
+
+DETALLE PASO A PASO: SIMULACIÓN 1 (VINILO ECONÓMICO)
+ patron 5 (franja 1) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 2) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 3) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 4) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 5) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 6) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 7) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 8) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 9) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 10) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 11) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 12) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 13) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 14) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 15) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 16) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 17) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 18) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 19) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 20) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 21) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 22) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 23) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 24) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 25) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 26) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 27) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 28) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 29) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 30) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 31) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 32) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 33) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 34) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 35) -> a_int fallidos: 1 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 36) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 37) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 38) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 39) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 40) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 41) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 42) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 43) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 44) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 45) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 46) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 47) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 5 (franja 48) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 6 (franja 1) -> a_int fallidos: 0 | li_int fallidos: 1 | le_ext fallidos: 0
+ patron 6 (franja 2) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 7 (franja 1) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 7 (franja 2) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 7 (franja 3) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 7 (franja 4) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 7 (franja 5) -> a_int fallidos: 0 | li_int fallidos: 2 | le_ext fallidos: 0
+ patron 7 (franja 6) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 8 (franja 1) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 1
+ patron 8 (franja 2) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 0
+ patron 9 (franja 1) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 1
+ patron 9 (franja 2) -> a_int fallidos: 0 | li_int fallidos: 0 | le_ext fallidos: 2
+FIN DEL DETALLE DE LA SIMULACIÓN 1 (VINILO ECONÓMICO)
+
+RESULTADOS FINALES DEL ESTRÉS (VINILO ECONÓMICO)
+1. Demanda real estricta : 80 a_int | 22 li_int | 11 le_ext
+2. Objetivo de corte     : 96 a_int | 27 li_int | 14 le_ext
+
+Estadisticas tras 1000000 simulaciones:
+- Promedio : 86.4 a_int | 25.2 li_int | 12.6 le_ext
+- Peor caso: 70 a_int | 16 li_int | 6 le_ext
+- Mejor caso: 96 a_int | 28 li_int | 14 le_ext
+
+CONCLUSIÓN VINILO ECONÓMICO:
+Hay un 92.57% de confianza en que la compra cubre la demanda real
+
+
+RESUMEN FINAL DE CONFIANZA DEL PROYECTO
+Tras ejecutar 1000000 universos paralelos por cada material:
+
+1. Cartón Piedra     : 99.47% de éxito (asumiendo 5% de prob. de falla)
+Manufactura simulada : 40 agendas y 11 libretas
+
+2. Vinilo Exterior   : 94.50% de éxito (asumiendo 1% de prob. de falla)
+Manufactura simulada : 40 agendas y 11 libretas
+
+3. Vinilo Económico  : 92.57% de éxito (asumiendo 10% de prob. de falla)
+Manufactura simulada : 40 agendas y 11 libretas
+
+Simulación terminada. Tiempo total de ejecución: 6.7680 segundos
+diary off
