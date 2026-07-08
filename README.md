@@ -14,6 +14,9 @@ El proyecto busca optimizar el proyecto de agendas y libretas icmat ufro
 ├── Varias Maquinas/
 │   ├── Reportes (HTML)
 │   └── ...
+├── 12en12 agendas/
+│   ├── Reportes (HTML)
+│   └── ...
 |
 | (Optimizaciones de Corte)
 ├── escenarios.m
@@ -52,3 +55,6 @@ Carpeta con reportes con maquinaria única
 
 # Varias Maquinas
 Carpeta con reportes con varias máquinas
+
+# 12en12 agendas
+Carpeta con reportes con aumentos de 12en12 agendas
